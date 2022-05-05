@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Card from "../card/Card";
+import CustomTable from "../table/CustomTable";
 
 import {
   BsSearch,
@@ -11,7 +12,6 @@ import {
 
 import "./styles.css";
 
-import BgSignUps from "../../assets/img/BgSignUp.png";
 import {
   Stack,
   Breadcrumb,
@@ -20,8 +20,72 @@ import {
 } from "@chakra-ui/react";
 
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
+import ApexCharts from "apexcharts";
 
 export default function MainContent() {
+  const options = {
+    chart: {
+      height: 350,
+      type: "radialBar",
+    },
+    series: [70],
+    labels: ["Progress"],
+  };
+
+  const theadData = ["", "2019", "2020", "2021"];
+
+  const tbodyData = [
+    {
+      id: "1",
+      items: [
+        "Patrimônio Líquido",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+      ],
+    },
+    {
+      id: "2",
+      items: [
+        "Faturamento",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+      ],
+    },
+    {
+      id: "3",
+      items: ["EBITDA", "R$1.800.340,00", "R$1.800.340,00", "R$1.800.340,00"],
+    },
+    {
+      id: "4",
+      items: [
+        "Lucro Líquido",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+      ],
+    },
+    {
+      id: "5",
+      items: [
+        "Endividamento CP",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+      ],
+    },
+    {
+      id: "6",
+      items: [
+        "Endividamento LP",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+        "R$1.800.340,00",
+      ],
+    },
+  ];
+
   return (
     <>
       <section className="main">
@@ -129,8 +193,14 @@ export default function MainContent() {
               </strong>
             }
           >
-            <h3>Ola</h3>
-            <p></p>
+            <div className="table">
+              <h2>Balanço e DRE</h2>
+              <CustomTable
+                theadData={theadData}
+                tbodyData={tbodyData}
+                variant="simple"
+              />
+            </div>
           </Card>
 
           <Card>

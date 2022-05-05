@@ -222,3 +222,8 @@ header {
 .liquidez {
     background: #C4C4C4;
 }
+
+.table h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
