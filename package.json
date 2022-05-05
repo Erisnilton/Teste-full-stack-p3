@@ -24,7 +24,8 @@
     "typescript": "^4.6.4",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "https://github.com/Erisnilton/Teste-full-stack-p3",
+  
+  "homepage": "https://erisnilton.dev/Teste-full-stack-p3",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
