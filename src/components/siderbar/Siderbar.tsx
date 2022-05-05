@@ -1,14 +1,17 @@
 import React from "react";
 import Logo from "../../assets/img/logo-full.png";
+import Home from '../../assets/icon/home.svg';
 import "./styles.css";
 
 import Tree, { TreeNode } from "../tree/Tree";
+import {BsHouseDoor} from "react-icons/bs";
+import Devider from "../ui/Diveder";
 
 export default function Siderbar() {
   const items: TreeNode[] = [
     {
       text: "Visão Geral",
-      icon: "",
+      icon: '',
       active: true,
     },
     {
@@ -40,7 +43,7 @@ export default function Siderbar() {
   return (
     <div className="siderbar">
       <img className="siderbar__logo" src={Logo} />
-      <div className="divider"></div>
+      <Devider/>
       <div className="home">
         <Tree items={items} />
 

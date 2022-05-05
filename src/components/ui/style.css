@@ -1,0 +1,41 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    font-family: Helvetica;
+    margin-bottom: 12px;
+}
+.box--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    color: #2D3748;;
+    font-weight: 700;
+    line-height: 14px;
+    margin-left: 16px;
+}
+
+.subtitle {
+    font-size: 5px;
+    font-weight: 400;
+    color:#C4C4C4;;
+}
+
+.box > .icon--box {
+
+}
+
+.divider {
+    margin: 16px 0px;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 49.52%, rgba(224, 225, 226, 0.15625) 99.04%);
+}
