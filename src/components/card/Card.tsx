@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 import "./styles.css";
 
 export interface CardProps {
-  right?: Element[];
-  children: Element[];
+  right?: ReactElement | ReactElement[];
+  children: ReactElement | ReactElement[];
   color?: string;
   style?: any
 }

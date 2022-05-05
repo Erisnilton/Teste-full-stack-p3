@@ -1,3 +1,4 @@
+import { ApexOptions } from "apexcharts";
 export function getChartPerformace() {
   return {
     series: [
@@ -58,10 +59,10 @@ export function getChartPerformace() {
         },
       ],
     },
-  };
+  } as ApexOptions;
 }
 
-export function getChartBar(data, categories) {
+export function getChartBar(data: any[], categories: any[]) {
   return {
     series: [
       {
@@ -86,29 +87,19 @@ export function getChartBar(data, categories) {
         categories: categories,
       },
     },
-  };
+  } as ApexOptions;
 }
 export function getChartPie() {
   return {
     series: [1.2, 1.5],
     options: {
       chart: {
-        width: 6000,
+        width: 380,
       },
       labels: ["Risco", "Limite"],
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200,
-            },
-            legend: {
-              position: "bottom",
-            },
-          },
-        },
-      ],
-    },
+      legend: {
+        show: false,
+      },
+    } as ApexOptions,
   };
 }

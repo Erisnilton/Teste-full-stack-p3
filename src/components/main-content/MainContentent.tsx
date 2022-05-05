@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Card from "../card/Card";
-import CustomTable from "../table/CustomTable";
+import CustomTable, { CustomTableHeader } from "../table/CustomTable";
 import LogoProfile from "../../assets/svg/logo-profile.svg";
 import LogoSerasa from "../../assets/img/serasa-experian.png";
 
@@ -48,92 +48,128 @@ export default function MainContent() {
     "05/2023",
   ];
 
-  const chartPerformace = getChartPerformace();
-  const chartBarBanck = getChartBar(dataBarBank, categoriesBarBank);
-  const chartPie = getChartPie();
-  const theadDataBalance = ["", "2019", "2020", "2021"];
+  const chartPerformace: any = getChartPerformace();
+  const chartBarBanck: any = getChartBar(dataBarBank, categoriesBarBank);
+  const chartPie : any = getChartPie();
+  const theadDataBalance: CustomTableHeader[] = [
+    {
+      id: 'type', text: '', get: (item) => item.type   
+    
+    },
+    {
+      id: '2019', text: '2019', get: (item) => item.a2019
+
+    },
+    {
+      id: '2020', text: '2020', get: (item) => item.a2020
+
+    },
+
+    {
+      id: '2021', text: '2021', get: (item) => item.a2021
+
+    },
+];
 
   const tbodyDataBalance = [
     {
-      id: "1",
-      items: [
-        "Patrimônio Líquido",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-      ],
+      id: '1',
+      type: "Patrimônio Líquido",
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
+      a2021: "R$1.800.340,00"
     },
     {
-      id: "2",
-      items: [
-        "Faturamento",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-      ],
+      id: '2',
+      type: "Faturamento",
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
+      a2021: "R$1.800.340,00"
     },
     {
-      id: "3",
-      items: ["EBITDA", "R$1.800.340,00", "R$1.800.340,00", "R$1.800.340,00"],
+      id: '3',
+      type: "EBITDA",
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
+      a2021: "R$1.800.340,00"
     },
     {
-      id: "4",
-      items: [
-        "Lucro Líquido",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-      ],
+      id: '4',
+      type: "Lucro Líquido",
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
+      a2021: "R$1.800.340,00"
     },
     {
-      id: "5",
-      items: [
-        "Endividamento CP",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-      ],
+      id: '5',
+      type: "Endividamento CP",
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
+      a2021: "R$1.800.340,00"
     },
     {
-      id: "6",
-      items: [
-        "Endividamento LP",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-        "R$1.800.340,00",
-      ],
+      id: '6',
+      type: "Endividamento LP",
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
+      a2021: "R$1.800.340,00"
     },
   ];
 
-  const theadDataHistory = ["", "2019", "2020"];
+  const theadDataHistory: CustomTableHeader[] = [
+    {
+      id: 'type', text: '', get: (item) => item.type   
+    
+    },
+    {
+      id: '2019', text: '2019', get:(item) => item.a2019
+    },
+    {
+      id: '2020', text:'2020', get:(item) => item.a2020
+    }
+  ]
   const tbodyDataHistory = [
     {
       id: "1",
-      items: ["Pré - pgto", "R$1.800.340,00", "R$1.800.340,00"],
+      type: "Pré - pgto",
+      a2019: "R$1.800.340,00", 
+      a2020:"R$1.800.340,00",
     },
     {
       id: "2",
-      items: ["No vencimento", "R$1.800.340,00", "R$1.800.340,00"],
+      type:"No vencimento", 
+      a2019: "R$1.800.340,00", 
+      a2020: "R$1.800.340,00",
     },
     {
       id: "3",
-      items: ["1 - 5", "R$1.800.340,00", "R$1.800.340,00"],
+      type: "1 - 5", 
+      a2019: "R$1.800.340,00", 
+      a2020: "R$1.800.340,00",
     },
     {
       id: "4",
-      items: ["6 - 15", "R$1.800.340,00", "R$1.800.340,00"],
+      type:"6 - 15", 
+      a2019: "R$1.800.340,00", 
+      a2020: "R$1.800.340,00",
     },
     {
       id: "5",
-      items: ["16 - 30", "R$1.800.340,00", "R$1.800.340,00"],
+      type: "16 - 30", 
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
     },
     {
       id: "6",
-      items: ["31 - 60", "R$1.800.340,00", "R$1.800.340,00"],
+      type: "31 - 60", 
+      a2019: "R$1.800.340,00", 
+      a2020: "R$1.800.340,00",
     },
     {
       id: "7",
-      items: ["31 - 60", "R$1.800.340,00", "R$1.800.340,00"],
+      type: "31 - 60", 
+      a2019: "R$1.800.340,00",
+      a2020: "R$1.800.340,00",
     },
   ];
 
@@ -228,6 +264,7 @@ export default function MainContent() {
               options={chartPie.options}
               series={chartPie.series}
               type="pie"
+              width={150}
             />
             <div className="pie">
               <h2>Crédito</h2>
@@ -247,8 +284,8 @@ export default function MainContent() {
             <div className="table">
               <h2>Balanço e DRE</h2>
               <CustomTable
-                theadData={theadDataBalance}
-                tbodyData={tbodyDataBalance}
+                columns={theadDataBalance}
+                rows={tbodyDataBalance}
                 variant="simple"
               />
             </div>
@@ -311,8 +348,8 @@ export default function MainContent() {
             <div className="table">
               <h2>Histórico</h2>
               <CustomTable
-                theadData={theadDataHistory}
-                tbodyData={tbodyDataHistory}
+                columns={theadDataHistory}
+                rows={tbodyDataHistory}
                 variant="simple"
               />
             </div>
@@ -335,8 +372,8 @@ export default function MainContent() {
           <Card>
             <h2>Dados Bancários</h2>
             <CustomTable
-              theadData={theadDataBalance}
-              tbodyData={tbodyDataBalance}
+              columns={theadDataBalance}
+              rows={tbodyDataBalance}
               variant="simple"
             />
           </Card>
