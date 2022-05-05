@@ -1,0 +1,32 @@
+.siderbar {
+    width: 304px;
+    min-height: 100vh;
+    padding: 15px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.siderbar section {
+    margin-left: 25px;
+}
+
+.siderbar section h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 16px;
+
+}
+.siderbar__logo {
+    width: 171px;
+}
+
+.divider {
+    margin: 16px 0px;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 49.52%, rgba(224, 225, 226, 0.15625) 99.04%);
+}
+
+.conta-section {
+    margin-top: 61px;
+}

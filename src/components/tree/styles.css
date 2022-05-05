@@ -1,0 +1,53 @@
+
+.tree {
+    list-style: none;
+    font-size: 12px;
+    color: #A0AEC0;
+}
+
+.tree-node-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    white-space: nowrap;
+}
+
+.tree-node .tree .tree-node-header {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.tree-node > .tree{
+    border-left: 1px solid #E2E8F0;
+    margin-left: 39px;
+    padding-left: 16px;
+
+}
+
+.tree-node-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    margin-right: 0.5rem;
+    color: #1FAB89;
+}
+
+.tree-node--active .tree-node-header{
+    background: #FFF;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    color: #2D3748;
+    font-weight: bold;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.tree-node--active .tree-node-icon {
+    background: #1FAB89;
+    color: white;
+}

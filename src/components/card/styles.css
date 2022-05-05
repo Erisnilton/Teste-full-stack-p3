@@ -1,0 +1,26 @@
+.card-content {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px 14px;
+    color: black;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+
+}
+
+.card {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    color: white;
+}
+
+.card-right {
+    margin-left: -15px;
+    padding-left: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 9px;
+}
