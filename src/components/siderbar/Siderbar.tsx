@@ -1,30 +1,34 @@
 import React from "react";
 import Logo from "../../assets/img/logo-full.png";
-import Home from '../../assets/icon/home.svg';
 import "./styles.css";
 
 import Tree, { TreeNode } from "../tree/Tree";
-import {BsHouseDoor} from "react-icons/bs";
 import Devider from "../ui/Diveder";
+import {
+  BsSearch,
+  BsPerson,
+  BsFillBellFill,
+  BsFillGearFill,
+} from "react-icons/bs";
 
 export default function Siderbar() {
   const items: TreeNode[] = [
     {
       text: "Visão Geral",
-      icon: '',
+      icon:  '',
       active: true,
     },
     {
       text: "Carteira de cliente",
-      icon: "",
+      icon:   '',
       children: [
         {
           text: "Fazenda Agro Mais",
-          icon: "",
+          icon: ''
         },
         {
           text: "Fazenda Agro Top",
-          icon: "",
+          icon: '',
         },
       ],
     },
@@ -33,11 +37,11 @@ export default function Siderbar() {
   const conta: TreeNode[] = [
     {
       text: "Rafael",
-      icon: "",
+      icon: '',
     },
     {
       text: "Configurações",
-      icon: "",
+      icon: '',
     },
   ];
   return (

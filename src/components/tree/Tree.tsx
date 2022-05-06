@@ -1,11 +1,9 @@
-import React from "react";
+import React, { ComponentType } from "react";
 import "./styles.css";
 import classNames from "classnames";
-import { IconType } from "react-icons";
-
 export interface TreeNode {
   text: string;
-  icon: IconType | string;
+  icon: string;
   route?: string;
   active?: boolean;
   children?: TreeNode[];
@@ -28,6 +26,7 @@ export default function Tree(props: { items: TreeNode[] }) {
             </div>
             {item.children && <Tree items={item.children} />}
           </li>
+          
         );
       })}
     </ul>

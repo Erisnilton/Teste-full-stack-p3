@@ -3,14 +3,14 @@ export function getChartPerformace() {
   return {
     series: [
       {
-        name: "Website Blog",
+        name: "Performace",
         type: "column",
-        data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160],
+        data: [60, 45, 41, 58, 65, 80, 88, 98],
       },
       {
-        name: "Social Media",
+        name: "Histórico",
         type: "line",
-        data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16],
+        data: [45, 88, 86, 95, 93, 81, 59, 77],
       },
     ],
     options: {
@@ -21,40 +21,27 @@ export function getChartPerformace() {
       stroke: {
         width: [0, 4],
       },
-      title: {
-        text: "Traffic Sources",
-      },
       dataLabels: {
         enabled: true,
-        enabledOnSeries: [1],
+        enabledOnSeries: [3],
       },
-      labels: [
-        "01 Jan 2001",
-        "02 Jan 2001",
-        "03 Jan 2001",
-        "04 Jan 2001",
-        "05 Jan 2001",
-        "06 Jan 2001",
-        "07 Jan 2001",
-        "08 Jan 2001",
-        "09 Jan 2001",
-        "10 Jan 2001",
-        "11 Jan 2001",
-        "12 Jan 2001",
-      ],
+      labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
+      legend: {
+        show: false,
+      },
       xaxis: {
-        type: "datetime",
+        type: "text",
       },
       yaxis: [
         {
           title: {
-            text: "Website Blog",
+            text: "Performace",
           },
         },
         {
           opposite: true,
           title: {
-            text: "Social Media",
+            text: "Histórico",
           },
         },
       ],
@@ -101,5 +88,19 @@ export function getChartPie() {
         show: false,
       },
     } as ApexOptions,
+  };
+}
+
+export function getDatabank() {
+  return {
+    dataBarBank: [0, 100, 200, 300, 400, 500, 750, 1000, 1500],
+    categoriesBarBank: [
+      "05/2022",
+      "08/2022",
+      "09/2022",
+      "12/2022",
+      "04/2023",
+      "05/2023",
+    ],
   };
 }
