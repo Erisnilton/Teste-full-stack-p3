@@ -27,7 +27,9 @@
 }
 
 .tree-node-icon {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
     background: #FFFFFF;

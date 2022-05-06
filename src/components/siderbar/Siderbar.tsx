@@ -5,30 +5,31 @@ import "./styles.css";
 import Tree, { TreeNode } from "../tree/Tree";
 import Devider from "../ui/Diveder";
 import {
-  BsSearch,
-  BsPerson,
-  BsFillBellFill,
-  BsFillGearFill,
+  BsWrench,
+  BsWallet,
+  BsFillBarChartFill,
+  BsFillPersonFill,
 } from "react-icons/bs";
+import { FaHome, FaWrench } from "react-icons/fa";
 
 export default function Siderbar() {
   const items: TreeNode[] = [
     {
       text: "Visão Geral",
-      icon:  '',
+      icon:  FaHome,
       active: true,
     },
     {
       text: "Carteira de cliente",
-      icon:   '',
+      icon:   BsFillBarChartFill,
       children: [
         {
           text: "Fazenda Agro Mais",
-          icon: ''
+          icon: BsWallet
         },
         {
           text: "Fazenda Agro Top",
-          icon: '',
+          icon: BsWallet,
         },
       ],
     },
@@ -37,11 +38,11 @@ export default function Siderbar() {
   const conta: TreeNode[] = [
     {
       text: "Rafael",
-      icon: '',
+      icon: BsFillPersonFill,
     },
     {
       text: "Configurações",
-      icon: '',
+      icon: FaWrench,
     },
   ];
   return (

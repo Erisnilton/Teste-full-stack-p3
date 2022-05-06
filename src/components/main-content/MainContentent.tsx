@@ -11,7 +11,11 @@ import {
   BsPerson,
   BsFillBellFill,
   BsFillGearFill,
-  BsFillCaretDownFill
+  BsFillCaretDownFill,
+  BsFilePlus,
+  BsPlus,
+  BsFillPersonFill,
+  BsWrench
 } from "react-icons/bs";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
 import {
@@ -19,6 +23,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
+  Icon,
 } from "@chakra-ui/react";
 
 import ReactApexChart from "react-apexcharts";
@@ -28,10 +33,10 @@ import {
   getChartPie,
   getDatabank,
 } from "../../service";
-import Box from "../ui/Box";
+import CustomBox from "../ui/CustomBox";
 import Devider from "../ui/Diveder";
 import Tag from "../ui/Tag";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaBalanceScale, FaBalanceScaleLeft, FaBalanceScaleRight, FaBox, FaCalendarAlt, FaCheck, FaCheckCircle, FaExclamationCircle, FaMinusCircle, FaWrench } from "react-icons/fa";
 
 export default function MainContent() {
   const { dataBarBank } = getDatabank();
@@ -203,7 +208,7 @@ export default function MainContent() {
               </div>
 
               <div className="user">
-                <BsPerson />
+                <BsFillPersonFill />
                 <span>Rafael</span>
               </div>
 
@@ -225,7 +230,7 @@ export default function MainContent() {
                 <span>gabriel@agromais.com.br</span>
                 <span>CPF: 12.345.678-9</span>
               </div>
-              <Tag icon="+" title="Solicitar Crédito" />
+              <Tag icon={BsPlus} title="Solicitar Crédito" />
               <div className="initial">
                 <div className="circle">.</div>
                 <span>Cliente desde</span>
@@ -233,9 +238,9 @@ export default function MainContent() {
               </div>
             </div>
             <div className="analyzer">
-              <Tag icon="&" title="Análise" isBg={true} />
-              <Tag icon="&" title=" Balanço" isBg={false} />
-              <Tag icon="@" title="Configurações" isBg={false} />
+              <Tag icon={FaBox} title="Análise" isBg={true} />
+              <Tag icon={FaBalanceScale} title=" Balanço" isBg={false} />
+              <Tag icon={FaWrench} title="Configurações" isBg={false} />
             </div>
           </div>
         </header>
@@ -289,25 +294,32 @@ export default function MainContent() {
           </Card>
 
           <Card>
-            <Box
+            <CustomBox
               color="#1FAB89"
               image={LogoSerasa}
               title="Sem Restritivos"
               subtitle="Verificado às 21:52:12 (GMT-2)"
+              icon={FaCheckCircle}
+              colorIcon='#48BB78'
             />
 
-            <Box
+            <CustomBox
               color="#ECB22E"
               image={LogoSerasa}
               title="Impedimento Encontrado"
               subtitle="Verificado às 21:52:12 (GMT-2)"
+              icon={FaExclamationCircle}
+              colorIcon="#ECB22E"
+              link="Clique para ver mais"
             />
 
-            <Box
+            <CustomBox
               color="#E0E1E2"
               image={LogoSerasa}
               title="Sem informação"
               subtitle="Verificado às 21:52:12 (GMT-2)"
+              icon={FaMinusCircle}
+              colorIcon="#CCD2E3"
             />
 
             <Devider />

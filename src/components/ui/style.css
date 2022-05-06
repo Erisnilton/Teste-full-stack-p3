@@ -29,8 +29,17 @@
     color:#C4C4C4;;
 }
 
-.box > .icon--box {
+.icon--box {
+    display: flex;
+}
+.icon--box a {
+    margin-left: 5px;
+    font-size: 9px;
+}
 
+.icon--box a:hover {
+    text-decoration:underline;
+    cursor: pointer;
 }
 
 .divider {

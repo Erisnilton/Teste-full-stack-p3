@@ -1,4 +1,6 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
+import { IconType } from "react-icons";
 import './style.css';
 
 export interface BoxProps {
@@ -6,12 +8,14 @@ export interface BoxProps {
     image: string;
     title: string;
     subtitle: string;
-    icon?:string;
+    icon?:IconType
+    colorIcon?: string
     titleIcon?: string;
+    link?: string
 
 }
 
-export default function Box({color, image, title, subtitle, icon, titleIcon}: BoxProps) {
+export default function CustomBox({color, image, title, subtitle, icon,colorIcon, titleIcon, link}: BoxProps) {
     return(
 
         <div className="box">
@@ -24,7 +28,8 @@ export default function Box({color, image, title, subtitle, icon, titleIcon}: Bo
                     <span>{subtitle}</span>
                 </div>
                 <div className="icon--box">
-                    {icon && {icon}}
+                    {icon && <Box as={icon} size="14px" color={colorIcon}/>}
+                    {link && <a href="#"> { link }</a>}
                     <span>{titleIcon}</span>
                 </div>
             </div>
