@@ -38,15 +38,13 @@ import Devider from "../ui/Diveder";
 import Tag from "../ui/Tag";
 import {
   FaBalanceScale,
-  FaBalanceScaleLeft,
-  FaBalanceScaleRight,
   FaBox,
   FaCalendarAlt,
-  FaCheck,
   FaCheckCircle,
   FaExclamationCircle,
   FaMinusCircle,
   FaPencilAlt,
+  FaSyncAlt,
   FaWrench,
 } from "react-icons/fa";
 
@@ -192,43 +190,46 @@ export default function MainContent() {
       <section className="main">
         <header>
           <div className="navbar">
-            <div className="read">
-              <div className="readcrumb">
-                <Breadcrumb fontWeight="medium" fontSize="sm">
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="#">Pages</BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbItem isCurrentPage>
-                    <BreadcrumbLink href="#">Profile</BreadcrumbLink>
-                  </BreadcrumbItem>
-                </Breadcrumb>
-              </div>
-              <div>Profile</div>
-            </div>
+            <div className="navbar--content">
+              <div className="read">
+                <div className="readcrumb">
+                  <Breadcrumb fontWeight="medium" fontSize="sm">
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="#">Pages</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbItem isCurrentPage>
+                      <BreadcrumbLink href="#">Profile</BreadcrumbLink>
+                    </BreadcrumbItem>
+                  </Breadcrumb>
+                </div>
 
-            <div className="actions">
-              <div className="input-text">
-                <Stack spacing={4}>
-                  <InputGroup>
-                    <InputLeftElement
-                      pointerEvents="none"
-                      children={<BsSearch color="white" />}
-                    />
-                    <Input placeholder="Type here ..." />
-                  </InputGroup>
-                </Stack>
+                <div>Profile</div>
               </div>
 
-              <div className="user">
-                <BsFillPersonFill />
-                <span>Rafael</span>
-              </div>
+              <div className="actions">
+                <div className="input-text">
+                  <Stack spacing={4}>
+                    <InputGroup>
+                      <InputLeftElement
+                        pointerEvents="none"
+                        children={<BsSearch color="white" />}
+                      />
+                      <Input placeholder="Type here ..." />
+                    </InputGroup>
+                  </Stack>
+                </div>
 
-              <div className="notification">
-                <BsFillBellFill />
-              </div>
-              <div className="gear">
-                <BsFillGearFill />
+                <div className="user">
+                  <BsFillPersonFill />
+                  <span>Rafael</span>
+                </div>
+
+                <div className="notification">
+                  <BsFillBellFill />
+                </div>
+                <div className="gear">
+                  <BsFillGearFill />
+                </div>
               </div>
             </div>
           </div>
@@ -339,6 +340,10 @@ export default function MainContent() {
 
             <Devider />
             <span className="restrict">Restritivos</span>
+            <div className="update">
+              <FaSyncAlt />
+              <span>atualizar</span>
+            </div>
           </Card>
         </section>
         <section>
@@ -421,6 +426,9 @@ export default function MainContent() {
             </div>
           </Card>
         </section>
+      <footer>
+        <span>@2022, OpenCred</span>
+      </footer>
       </section>
     </>
   );
