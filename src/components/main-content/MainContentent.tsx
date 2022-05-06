@@ -212,7 +212,7 @@ export default function MainContent() {
                   <InputGroup>
                     <InputLeftElement
                       pointerEvents="none"
-                      children={<BsSearch color="black" />}
+                      children={<BsSearch color="white" />}
                     />
                     <Input placeholder="Type here ..." />
                   </InputGroup>

@@ -1,5 +1,6 @@
 .fill {
     width: 100%;
+    font-weight: bold;
 }
 .table td {
     padding: .25rem;

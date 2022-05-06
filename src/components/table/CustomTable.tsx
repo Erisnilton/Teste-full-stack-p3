@@ -7,10 +7,8 @@ import {
   Thead,
   Tbody,
   Tr,
-  Td,
   TableContainer,
   Th,
-  Circle,
 } from "@chakra-ui/react";
 
 export interface CustomTableHeader {
