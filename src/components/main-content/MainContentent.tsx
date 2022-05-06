@@ -15,7 +15,7 @@ import {
   BsFilePlus,
   BsPlus,
   BsFillPersonFill,
-  BsWrench
+  BsWrench,
 } from "react-icons/bs";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
 import {
@@ -36,7 +36,19 @@ import {
 import CustomBox from "../ui/CustomBox";
 import Devider from "../ui/Diveder";
 import Tag from "../ui/Tag";
-import { FaBalanceScale, FaBalanceScaleLeft, FaBalanceScaleRight, FaBox, FaCalendarAlt, FaCheck, FaCheckCircle, FaExclamationCircle, FaMinusCircle, FaWrench } from "react-icons/fa";
+import {
+  FaBalanceScale,
+  FaBalanceScaleLeft,
+  FaBalanceScaleRight,
+  FaBox,
+  FaCalendarAlt,
+  FaCheck,
+  FaCheckCircle,
+  FaExclamationCircle,
+  FaMinusCircle,
+  FaPencilAlt,
+  FaWrench,
+} from "react-icons/fa";
 
 export default function MainContent() {
   const { dataBarBank } = getDatabank();
@@ -222,8 +234,11 @@ export default function MainContent() {
           </div>
           <div className="navbar__bg">
             <div className="profile">
+              <img src={LogoProfile} />
               <div className="profile__logo">
-                <img src={LogoProfile} />
+                <div className="box-pencil">
+                  <FaPencilAlt />
+                </div>
               </div>
               <div className="profile__info">
                 <h2>produtor rural</h2>
@@ -300,7 +315,7 @@ export default function MainContent() {
               title="Sem Restritivos"
               subtitle="Verificado às 21:52:12 (GMT-2)"
               icon={FaCheckCircle}
-              colorIcon='#48BB78'
+              colorIcon="#48BB78"
             />
 
             <CustomBox
@@ -334,7 +349,7 @@ export default function MainContent() {
             </div>
             <div className="calendar">
               <div className="calendar--icon">
-                <FaCalendarAlt/>
+                <FaCalendarAlt />
               </div>
               <div className="button">
                 <span>
