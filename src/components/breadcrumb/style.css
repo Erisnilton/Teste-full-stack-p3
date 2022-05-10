@@ -1,0 +1,9 @@
+.breadcrumb a {
+    display: inline-block;
+
+}
+.breadcrumb a + a::before {
+    content: '/';
+    display: inline-block;
+    margin-left: 4px;
+}

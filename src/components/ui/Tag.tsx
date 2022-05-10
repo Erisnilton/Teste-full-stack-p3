@@ -7,15 +7,15 @@ export interface PropsTypes {
   color?: string;
   icon?: IconType
   title: string;
-  isBg?: boolean
+  elevated?: boolean
 }
 
-export default function Tag({ color, icon, title, isBg=true }: PropsTypes) {
+export default function Tag(props: PropsTypes) {
   return (
-    <div className={classNames(['credit', {'is-bg': isBg }])} >
+    <div className={classNames(['credit', {'is-bg': props.elevated??true }])} >
       <div className="profile__credit">
-        <div className="icon"><Box as={icon} size="14px"/></div>
-        <span>{title}</span>
+        <div className="icon"> { props.icon && <props.icon/>}</div>
+        <span>{props.title}</span>
       </div>
     </div>
   );

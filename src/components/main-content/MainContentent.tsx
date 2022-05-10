@@ -6,25 +6,18 @@ import CustomTable, { CustomTableHeader } from "../table/CustomTable";
 import LogoProfile from "../../assets/svg/logo-profile.svg";
 import LogoSerasa from "../../assets/img/serasa-experian.png";
 
+import Breadcrumb from "../breadcrumb/breadcrumb";
+
 import {
   BsSearch,
-  BsPerson,
   BsFillBellFill,
   BsFillGearFill,
   BsFillCaretDownFill,
-  BsFilePlus,
   BsPlus,
   BsFillPersonFill,
-  BsWrench,
 } from "react-icons/bs";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
-import {
-  Stack,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Icon,
-} from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 import ReactApexChart from "react-apexcharts";
 import {
@@ -185,6 +178,11 @@ export default function MainContent() {
     },
   ];
 
+  const items = [
+    { link: "#", text: "Pages" },
+    { link: "#", text: "Profile" },
+  ];
+
   return (
     <>
       <section className="main">
@@ -193,14 +191,7 @@ export default function MainContent() {
             <div className="navbar--content">
               <div className="read">
                 <div className="readcrumb">
-                  <Breadcrumb fontWeight="medium" fontSize="sm">
-                    <BreadcrumbItem>
-                      <BreadcrumbLink href="#">Pages</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                      <BreadcrumbLink href="#">Profile</BreadcrumbLink>
-                    </BreadcrumbItem>
-                  </Breadcrumb>
+                  <Breadcrumb items={items} />
                 </div>
 
                 <div>Profile</div>
@@ -254,9 +245,9 @@ export default function MainContent() {
               </div>
             </div>
             <div className="analyzer">
-              <Tag icon={FaBox} title="Análise" isBg={true} />
-              <Tag icon={FaBalanceScale} title=" Balanço" isBg={false} />
-              <Tag icon={FaWrench} title="Configurações" isBg={false} />
+              <Tag icon={FaBox} title="Análise" elevated={true} />
+              <Tag icon={FaBalanceScale} title=" Balanço" elevated={false} />
+              <Tag icon={FaWrench} title="Configurações" elevated={false} />
             </div>
           </div>
         </header>
@@ -426,9 +417,9 @@ export default function MainContent() {
             </div>
           </Card>
         </section>
-      <footer>
-        <span>@2022, OpenCred</span>
-      </footer>
+        <footer>
+          <span>@2022, OpenCred</span>
+        </footer>
       </section>
     </>
   );

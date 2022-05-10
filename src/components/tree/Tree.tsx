@@ -2,7 +2,6 @@ import React, { ComponentType } from "react";
 import "./styles.css";
 import classNames from "classnames";
 import { IconType } from "react-icons";
-import { Box } from "@chakra-ui/react";
 export interface TreeNode {
   text: string;
   icon: IconType
@@ -23,7 +22,7 @@ export default function Tree(props: { items: TreeNode[] }) {
             ])}
           >
             <div className="tree-node-header">
-                <span className="tree-node-icon"><Box as={item.icon } size={"16px"} /></span>
+                <span className="tree-node-icon">< item.icon size={'16px'}/></span>
                 <span>{item.text}</span>
             </div>
             {item.children && <Tree items={item.children} />}
